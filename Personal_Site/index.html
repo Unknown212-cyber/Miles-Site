@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Site</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
+  </head>
+  <body>
+	<nav class="navbar">
+		<ul>
+			<li><a href="#basketball">Basketball</a></li>
+			<li><a href="PhotoGallery.html">Photo Gallery</a></li>
+		</ul>
+	</nav>
+	<div id="time"></div>
+	<script>
+		function showTime() {
+			const time = new Date().toLocaleTimeString();
+			document.getElementById('time').textContent = time;
+		}
+		setInterval(showTime, 1000);
+		showTime();
+	</script>
+	<div id="weather">
+		<h2>Weather in Your City</h2>
+		<p id="temperature"></p>
+		<p id="description"></p>
+	</div>
+	<script>
+		const apiKey = '3e253624c2f7aace4f2ee0117bb310c8';
+		const city = 'Parksville';  // Replace with your city
+	
+		function getWeather() {
+			fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+				.then(response => response.json())
+				.then(data => {
+					document.getElementById('temperature').textContent = `Temperature: ${data.main.temp}°C`;
+					document.getElementById('description').textContent = `Weather: ${data.weather[0].description}`;
+				})
+				.catch(error => console.error('Error fetching weather:', error));
+		}
+	
+		// Fetch weather on page load
+		getWeather();
+	</script>
+    <div id="content">
+		<h3><marquee>Go Ballenas</marquee></h3>
+		<h1>Hello There</h1>
+		<form action="https://www.google.com/search" method="GET">
+			<input type="text" name="q" placeholder="Search Google">
+			<button type="submit">Search</button>
+		</form>
+		<br>
+		<a href="https://www.sd69.bc.ca/school/BSS/Pages/default.aspx#/=" target="_blank"><img class='ballenas-logo' src='https://www.sd69.bc.ca/PublishingImages/Lists/Announcements/NewForm/Ballenas%20Secondary%20School.png' alt='ballenas-logo'></img></a>
+		<h2>School Schedule:</h2>
+		<table>
+		<tr>
+			<th>Sunday</th>
+			<th>Monday</th>
+			<th>Tuesday</th>
+			<th>Wednsday</th>
+			<th>Thursday</th>
+			<th>Friday</th>
+			<th>Saturday</th>
+		</tr>
+		<tr>
+			<td>Holiday</td>
+			<td>8:40 - 3</td>
+			<td>8:40 - 3</td>
+			<td>8:40 - 3</td>
+			<td>8:40 - 3</td>
+			<td>8:40 - 3</td>
+			<td>Holiday</td>
+		</tr>
+		</table>
+		<h2>Things to bring to school:</h2>
+		<ul class="myUL">
+		<li>Pencil Case</li>
+		<li>Water Bottle</li>
+		<li>Books</li>
+		</ul>
+		<ol class="myOL">
+		<li>Pencil Case</li>
+		<li>Water Bottle</li>
+		<li>Books</li>
+		</ol>
+		<br>
+		<a href="https://www.google.com" target="_blank"><button class="click-me">Click Me to go to Google</button></a>
+		<h2 id="basketball">Ballenas VS Wellington</h2>
+		<img class='basketball-spinning' src="https://media1.giphy.com/media/GF2AmHWgqwtW5JOb1Y/giphy.gif?cid=6c09b952zyb4fsy16cumw8ionh4e3dlk5srssh6xzp33m835&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" alt="basketball-spinning"><br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/xknYjhqNrD4?si=rsFTqoaLfpCWoLNq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<marquee><img class="basketball" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png" alt="basketball"></marquee><br>
+		<p id="rollover">Hover over this text.</p>
+		<div id="map-container">
+			<iframe 
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2637.3548021410696!2d-124.34187238428227!3d49.31981987624673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5488a2f445edaa31%3A0xe528ce318c1e548b!2sParksville%2C%20BC%2C%20Canada!5e0!3m2!1sen!2sus!4v1694485435637!5m2!1sen!2sus" 
+				width="600" 
+				height="450" 
+				style="border:0;" 
+				allowfullscreen="" 
+				loading="lazy" 
+				referrerpolicy="no-referrer-when-downgrade">
+			</iframe>
+		</div>
+
+		<button class='toggle' onclick="toggleMode()">Toggle Light/Dark Mode</button>
+		<script>
+		function toggleMode() {
+			document.body.classList.toggle('dark-mode');
+		}
+		</script><br>
+	</div>
+  </body>
+</html>
