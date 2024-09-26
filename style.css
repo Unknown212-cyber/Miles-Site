@@ -1,0 +1,173 @@
+#weather{
+    text-align: center;
+  }
+table, th, td {
+    border:1px solid black;
+    text-align: center;
+}
+th {
+    width: 100px;
+}
+div {
+    text-align: center;
+    font-family: monospace;
+}
+#content {
+      text-align: center;
+}
+.myUL {
+    display: inline-block;
+    text-align: left;
+}
+.myOL {
+    display: inline-block;
+    text-align: left;
+}
+table {
+  margin-left: auto;
+    margin-right: auto;
+}
+.ballenas-logo{
+  width: 200px;
+  border-radius: 50%;
+}
+.click-me{
+    font-size: 2em;
+    background-color: lightblue;
+    border: none;
+    border-radius: 15px;
+    font-family: monospace;
+    font-weight: bold;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(110, 184, 233);
+    border-radius: 10px;
+  }
+
+.basketball-spinning{
+    width: 150px;
+}
+#rollover{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#rollover:hover{
+  color: rgb(4, 0, 255);
+}
+.basketball{
+  width: 100px;
+  border-radius: 50%;
+}
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+#map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 20px;
+}
+.toggle{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background-color: #7abbc0;
+  font-size: 1rem;
+  font-family: monospace;
+  padding: 5px;
+  font-weight: bold;
+  border: none;
+}
+
+/* Ensure the entire content is centered in the page */
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Center align the text and images in the gallery */
+.photo {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between images */
+}
+
+.scenery {
+  width: 400px; /* Adjust image width */
+  height: auto;
+  border-radius: 8px; /* Optional: to add rounded corners */
+}
+
+ /* Style the navbar */
+ .navbar {
+  background-color: #7abbc0;
+  overflow: hidden;
+}
+
+/* Style the navbar links */
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center the navbar items */
+}
+
+.navbar li {
+  margin: 0 20px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #6a97d3;
+  border-radius: 4px;
+}
+
+.go-back{
+  margin: 40px;
+  font-family: monospace;
+  font-size: 1.8rem;
+  border-radius: 30px;
+  background-color: #7abbc0;
+  padding: 5px;
+}
+#time{
+  margin-top: 20px;
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
