@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <form class="contact-form" action="mailto:miles_patel@sd69qualicum.ca" method="GET">
+            <!-- Name Field -->
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name..." required>
+
+            <!-- Email Field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email..." required>
+
+            <!-- Dropdown List -->
+            <label for="inquiry">Type of Inquiry:</label>
+            <select id="inquiry" name="inquiry" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Customer Support</option>
+                <option value="feedback">Feedback</option>
+            </select>
+
+            <!-- Radio Buttons -->
+            <label>Preferred Contact Method:</label>
+            <div class="radio-group">
+                <input type="radio" id="email-method" name="contact-method" value="email" required>
+                <label for="email-method">Email</label>
+
+                <input type="radio" id="phone-method" name="contact-method" value="phone">
+                <label for="phone-method">Phone</label>
+            </div>
+
+            <!-- Message Field -->
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="go-back-container">
+        <a href="index.html"><button class="go-back">Go Back</button></a>
+    </div>
+</body>
+</html>
